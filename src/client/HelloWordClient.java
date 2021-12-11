@@ -5,19 +5,18 @@ import util.HibernateUtil;
 import entity.Message;
 
 public class HelloWordClient {
-
     public static void main(String[] args) {
 
         try {
-        Session session = HibernateUtil.getSessionFactory().openSession();
-        session.beginTransaction();
+            Session session = HibernateUtil.getSessionFactory().openSession();
+            session.beginTransaction();
 
-        Message message = new Message("Hello Word with Hibernate and JPA Annotation");
+            Message message = new Message("Hello Word with Hibernate and JPA Annotation");
 
-        session.save(message);
+            session.save(message);
 
-        session.getTransaction().commit();
-        session.close();
+            session.getTransaction().commit();
+            session.close();
         }catch(NullPointerException npe){
             System.out.println();
         }

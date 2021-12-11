@@ -6,9 +6,7 @@ public class Message {
     private String text;
 
     public Message(){}
-    public Message(String text) {
-        this.text=text;
-    }
+    public Message(String text) { this.text=text; }
 
     public Long getId(){
         return id;

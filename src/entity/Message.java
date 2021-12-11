@@ -13,7 +13,7 @@ public class Message {
     private Long id;
 
     @Column(name = "TEXT")
-    private  String text;
+    private final String text;
 
     public Message( String text) {
         this.text = text;
